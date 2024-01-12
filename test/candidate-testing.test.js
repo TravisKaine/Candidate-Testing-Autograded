@@ -7,7 +7,7 @@ describe("Candidate Testing solution", function() {
 	it("Test 1. Data type of candidateName is string", function() {
 		expect(typeof solution.candidateName).toBe("string");
 	});
-hfhfhf 
+
   // question tests //
 	it("Test 2. Data type of question is string", function() {
 		expect(typeof solution.question).toBe("string");
