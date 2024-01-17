@@ -98,3 +98,4 @@ describe("Candidate Testing solution", function() {
 	
  
  });
+ "hello"
