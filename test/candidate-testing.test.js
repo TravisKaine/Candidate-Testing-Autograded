@@ -7,30 +7,34 @@ describe("Candidate Testing solution", function() {
 	it("Test 1. Data type of candidateName is string", function() {
 		expect(typeof solution.candidateName).toBe("string");
 	});
-
+   let candidateName = ""
   // question tests //
 	it("Test 2. Data type of question is string", function() {
 		expect(typeof solution.question).toBe("string");
 	});
-
+   let question = "Who was the first American woman in space?";
   it("Test 3. Correct question asked to user", function() {
 		expect(solution.question).toBe("Who was the first American woman in space? ");
 	});
-
+  let correctAnswer = "Sally Ride"
   // correctAnswer tests //
 	it("Test 4. Data type of correctAnswer is string", function() {
 		expect(typeof solution.correctAnswer).toBe("string");
 	});
-
+  let candidateAnswer = ""
   it("Test 5. correctAnswer gives the correct answer", function() {
 		expect(solution.correctAnswer).toBe("Sally Ride");
 	});
-
+  if (candidateAnswer === correctAnswer){
+    console.log("Correct Answer: Sally Ride")
+  } else {
+    console.log("Incorrect Answer")
+  }
   // candidateAnswer tests //
 	it("Test 6. Data type of candidateAnswer is string", function() {
 		expect(typeof solution.candidateAnswer).toBe("string");
 	});
-
+  console.log(candidateAnswer)
   // PART 2 // 
   // questions tests //
 	it("Test 7. questions array contains 5 questions", function() {
@@ -98,4 +102,3 @@ describe("Candidate Testing solution", function() {
 	
  
  });
- "hello"
