@@ -31,7 +31,8 @@ let candidateAnswers = [];
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-  candidateName = input.question("Candidate Name: ");
+  candidateName = input.question("Candidate Name: ")
+  console.log("");;
 }
 
 function askQuestion() {
@@ -49,34 +50,33 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-let numOfCorrectAnswers = 0;
-let numOfQuestions = candidateAnswer.length
-for (let i=0; i<numOfQuestions;i++){
-  if ((candidateAnswers[i]).toLowerCase()==correctAnswers[i].toLowerCase()){
-    numberOfCorrectAnswers +=1;
-   }
-  console.log(questions);
-  if (candidateAnswers === correctAnswers) {
-    console.log("Correct");
-  } else {
-    console.log("Incorrect");
+  let totalGrade = 0;
+  for (let i = 0; i < correctAnswers.length; i++) {
+    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
+      totalGrade++;
+    }
   }
-  console.log(candidateAnswers);
-}
 
-  let grade = (numOfCorrectAnswers / questions.length) * 100;  //TODO 3.2 use this variable to calculate the candidates score.
-  let status = grade >= 80 ? "PASSED" : "FAILED";
+ //TODO 3.2 use this variable to calculate the candidates score.
+ let grade = (totalGrade / questions.length) * 100;
+ let status = "";
+ if (grade >= 80){
+   status = "Passed";
+ }else{
+   status = "Failed";
+ }
 
-  console.log(`Final Grade: ${grade}% (${numOfCorrectAnswers} of ${questions.length} responses correct)`);
-  console.log(`Status: ${status}`);
-
+ console.log("");
+ console.log(`Grade: ${grade}% (${totalGrade} of ${questions.length} correct)`);
+ console.log(`Status: ${status}`)
 return grade;}
 
 
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-  console.log("Welcome Candiate: ", candidateName);
+  console.log("Welcoming Test Taker: ", candidateName);
+  console.log("")
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
